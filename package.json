@@ -1,0 +1,24 @@
+{
+  "name": "quizify-frontend",
+  "version": "0.0.1",
+  "description": "The React based frontend code for the quizify site.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saivishnu725/quizify-frontend.git"
+  },
+  "keywords": [
+    "quizify",
+    "frontend",
+    "react"
+  ],
+  "author": "The Unconcerned Ape",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/saivishnu725/quizify-frontend/issues"
+  },
+  "homepage": "https://github.com/saivishnu725/quizify-frontend#readme"
+}

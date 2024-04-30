@@ -21,9 +21,7 @@ The React based frontend code for the quizify site.
 2. Use nodemon to run the server
 
    ```bash
-   nodemon
-   # or if you don't have nodemon installed
-   node index.js
+   npm start
    ```
 
 3. Site is live at `localhost:3000`. Open it in your preferred browser.

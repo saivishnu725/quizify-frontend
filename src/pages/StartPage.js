@@ -237,81 +237,21 @@ const Home = (props) => {
                 </div>
             </div>
             {/* Banner*/}
-            <div className="home-banner">
+            <div className="home-banner" id="about">
                 <div className="home-banner1 bannerContainer">
                     <h1 className="home-banner-heading heading2">
                         Why Choose Our Quiz Hosting Platform?
                     </h1>
                     <span className="home-banner-sub-heading bodySmall">
                         <span>
-                            <span>
-                                <span>
-                                    Our platform offers a user-friendly interface to create,
-                                    customize, and host quizzes for various purposes such as
-                                    education, marketing, and entertainment. With a wide range of
-                                    question types, customization options, and result tracking
-                                    features, you can easily create engaging quizzes to captivate
-                                    your audience.
-                                </span>
-                                <span>
-                                    <span
-                                        dangerouslySetInnerHTML={{
-                                            __html: " ",
-                                        }}
-                                    />
-                                </span>
-                            </span>
-                            <span>
-                                <span>
-                                    <span
-                                        dangerouslySetInnerHTML={{
-                                            __html: " ",
-                                        }}
-                                    />
-                                </span>
-                                <span>
-                                    <span
-                                        dangerouslySetInnerHTML={{
-                                            __html: " ",
-                                        }}
-                                    />
-                                </span>
-                            </span>
+                            Our platform offers a user-friendly interface to create,
+                            customize, and host quizzes for various purposes such as
+                            education, marketing, and entertainment. With a wide range of
+                            question types, customization options, and result tracking
+                            features, you can easily create engaging quizzes to captivate
+                            your audience.
                         </span>
-                        <span>
-                            <span>
-                                <span>
-                                    <span
-                                        dangerouslySetInnerHTML={{
-                                            __html: " ",
-                                        }}
-                                    />
-                                </span>
-                                <span>
-                                    <span
-                                        dangerouslySetInnerHTML={{
-                                            __html: " ",
-                                        }}
-                                    />
-                                </span>
-                            </span>
-                            <span>
-                                <span>
-                                    <span
-                                        dangerouslySetInnerHTML={{
-                                            __html: " ",
-                                        }}
-                                    />
-                                </span>
-                                <span>
-                                    <span
-                                        dangerouslySetInnerHTML={{
-                                            __html: " ",
-                                        }}
-                                    />
-                                </span>
-                            </span>
-                        </span>
+                        <br></br>
                     </span>
                     <button className="buttonFilled">Learn More</button>
                 </div>

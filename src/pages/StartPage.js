@@ -27,14 +27,14 @@ const Home = (props) => {
                         </nav>
                         <div className="home-buttons">
                             <button className="home-login buttonFlat">
-                                {/* <a href="/login">Login</a> */}
-                                <span >Login</span>
+                                <a href="/login">Login</a>
                             </button>
                             <button className="buttonFilled home-register">
                                 <a href="/register">Register</a>
                             </button>
                         </div>
                     </div>
+                    {/* Mobile BS. Ignored for now. Might even remove it */}
                     <div data-thq="thq-burger-menu" className="home-burger-menu">
                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="35" height="35" viewBox="0,0,256,256">
                             <g fill="#ffffff" fillRule="nonzero" stroke="none" strokeWidth="1" strokeLinecap="butt" strokeLinejoin="miter" strokeMiterlimit="10" strokeDasharray="" strokeDashoffset="0" fontFamily="none" fontWeight="none" fontSize="none" textAnchor="none" style={{ mixBlendMode: "normal" }}><g transform="scale(5.12,5.12)"><path d="M0,7.5v5h50v-5zM0,22.5v5h50v-5zM0,37.5v5h50v-5z"></path></g></g>
@@ -89,6 +89,7 @@ const Home = (props) => {
                             </svg>
                         </div>
                     </div>
+                    {/* Mobile BS ends here */}
                 </header>
             </div>
             <div className="home-hero">
@@ -104,68 +105,7 @@ const Home = (props) => {
                                 <div className="home-container4">
                                     <span className="home-hero-sub-heading bodyLarge">
                                         <span>
-                                            <span>
-                                                <span>
-                                                    Engage your audience with interactive quizzes
-                                                </span>
-                                                <span>
-                                                    <span
-                                                        dangerouslySetInnerHTML={{
-                                                            __html: " ",
-                                                        }}
-                                                    />
-                                                </span>
-                                            </span>
-                                            <span>
-                                                <span>
-                                                    <span
-                                                        dangerouslySetInnerHTML={{
-                                                            __html: " ",
-                                                        }}
-                                                    />
-                                                </span>
-                                                <span>
-                                                    <span
-                                                        dangerouslySetInnerHTML={{
-                                                            __html: " ",
-                                                        }}
-                                                    />
-                                                </span>
-                                            </span>
-                                        </span>
-                                        <span>
-                                            <span>
-                                                <span>
-                                                    <span
-                                                        dangerouslySetInnerHTML={{
-                                                            __html: " ",
-                                                        }}
-                                                    />
-                                                </span>
-                                                <span>
-                                                    <span
-                                                        dangerouslySetInnerHTML={{
-                                                            __html: " ",
-                                                        }}
-                                                    />
-                                                </span>
-                                            </span>
-                                            <span>
-                                                <span>
-                                                    <span
-                                                        dangerouslySetInnerHTML={{
-                                                            __html: " ",
-                                                        }}
-                                                    />
-                                                </span>
-                                                <span>
-                                                    <span
-                                                        dangerouslySetInnerHTML={{
-                                                            __html: " ",
-                                                        }}
-                                                    />
-                                                </span>
-                                            </span>
+                                            Engage your audience with interactive quizzes
                                         </span>
                                     </span>
                                     <div className="home-btn-group">

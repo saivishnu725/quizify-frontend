@@ -257,7 +257,7 @@ const Home = (props) => {
                 </div>
             </div>
             {/* FAQ*/}
-            <div className="home-faq">
+            <div className="home-faq" id="faq">
                 <div className="faqContainer">
                     <div className="home-faq1">
                         <div className="home-container7">
@@ -287,12 +287,16 @@ const Home = (props) => {
                                 question="Is it possible to share my quiz on social media?"
                             ></QuestionCard>
                             <QuestionCard
-                                answer="Yes, you can view detailed analytics and results of all quizzes taken by participants. This includes scores, answers chosen, and completion rates."
+                                answer="Yes, you can view detailed analytics and results of all quizzes taken by participants. This includes the participant details, scores and answers chosen."
                                 question="Can I see the results of the quizzes taken by participants?"
                             ></QuestionCard>
                             <QuestionCard
                                 answer="There is no limit to the number of quizzes you can create on our platform. Feel free to create and host as many quizzes as you like!"
                                 question="Is there a limit to the number of quizzes I can create?"
+                            ></QuestionCard>
+                            <QuestionCard
+                                answer="There is no requirement to create an account to participate in a quiz. However, creating an account allows you to track your quiz results and save your progress."
+                                question="Do I have to create an account to participate in a quiz?"
                             ></QuestionCard>
                         </div>
                     </div>

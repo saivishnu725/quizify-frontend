@@ -12,6 +12,7 @@ const Home = (props) => {
             <Helmet>
                 <title>Quizify |</title>
             </Helmet>
+            {/* Header*/}
             <div className="home-header" id="header">
                 <header
                     data-thq="thq-navbar"
@@ -20,8 +21,8 @@ const Home = (props) => {
                     <span className="logo">QUIZIFY</span>
                     <div data-thq="thq-navbar-nav" className="home-desktop-menu">
                         <nav className="home-links">
-                            <a href="#header"> Home </a>
-                            <a href="#features"> Features </a>
+                            <a href="#hero"> Home </a>
+                            <a href="#register"> Features </a>
                             <a href="#about"> About </a>
                             <a href="#faq"> FAQ </a>
                         </nav>
@@ -92,7 +93,8 @@ const Home = (props) => {
                     {/* Mobile BS ends here */}
                 </header>
             </div>
-            <div className="home-hero">
+            {/* Hero*/}
+            <div className="home-hero" id="hero">
                 <div className="home-hero1 heroContainer">
                     <div className="home-container1">
                         <h1 className="home-hero-heading">
@@ -109,17 +111,22 @@ const Home = (props) => {
                                         </span>
                                     </span>
                                     <div className="home-btn-group">
-                                        <button className="buttonFilled">
-                                            Join using Invite Code
-                                        </button>
-                                        <button className="home-hero-button2 buttonFlat">
-                                            Create a new quiz
-                                        </button>
+                                        <a href="/join">
+                                            <button className="buttonFilled">
+                                                Join using Invite Code
+                                            </button>
+                                        </a>
+                                        <a href="/create">
+                                            <button className="home-hero-button2 buttonFlat" id="register">
+                                                Create a new quiz
+                                            </button>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    {/* TODO: Create an image and use it here */}
                     <img
                         src="https://placehold.co/200x200"
                         alt="placeholder"
@@ -128,12 +135,13 @@ const Home = (props) => {
                     />
                 </div>
             </div>
+            {/* Features*/}
             <div className="home-features">
                 <div className="featuresContainer">
                     <div className="home-features1">
                         <div className="home-container5">
-                            <span className="overline">
-                                <span>features</span>
+                            <span className="overline" id="features">
+                                <span>Features</span>
                                 <br></br>
                             </span>
                             <h2 className="home-features-heading heading2">
@@ -228,6 +236,7 @@ const Home = (props) => {
                     </div>
                 </div>
             </div>
+            {/* Banner*/}
             <div className="home-banner">
                 <div className="home-banner1 bannerContainer">
                     <h1 className="home-banner-heading heading2">
@@ -307,6 +316,7 @@ const Home = (props) => {
                     <button className="buttonFilled">Learn More</button>
                 </div>
             </div>
+            {/* FAQ*/}
             <div className="home-faq">
                 <div className="faqContainer">
                     <div className="home-faq1">
@@ -348,6 +358,7 @@ const Home = (props) => {
                     </div>
                 </div>
             </div>
+            {/* Footer*/}
             <div className="home-footer">
                 <footer className="home-footer1 footerContainer">
                     <footer className="home-footer2">

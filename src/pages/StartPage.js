@@ -10,7 +10,7 @@ const Home = (props) => {
     return (
         <div className="home-container">
             <Helmet>
-                <title>Quizify |</title>
+                <title>Quizify | TUA</title>
             </Helmet>
             {/* Header*/}
             <div className="home-header" id="header">
@@ -126,9 +126,8 @@ const Home = (props) => {
                             </div>
                         </div>
                     </div>
-                    {/* TODO: Create an image and use it here */}
                     <img
-                        src="https://placehold.co/200x200"
+                        src="/images/hero-image.png"
                         alt="placeholder"
                         loading="eager"
                         className="home-image"

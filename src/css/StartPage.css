@@ -335,11 +335,16 @@
 .home-text58 {
   color: var(--dl-color-gray-white);
 }
+.home-text58 a {
+  color: var(--dl-color-gray-white);
+  font-style: italic;
+}
 .home-icon-group1 {
   display: flex;
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
+  gap: var(--dl-space-space-halfunit);
 }
 .home-icon10 {
   fill: var(--dl-color-gray-white);
@@ -393,9 +398,6 @@
   .home-footer2 {
     width: 1192px;
     height: 100%;
-  }
-  .home-text58 {
-    color: var(--dl-color-gray-white);
   }
   .home-icon10 {
     fill: var(--dl-color-gray-white);

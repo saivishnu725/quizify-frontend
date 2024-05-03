@@ -40,20 +40,20 @@ a {
   --dl-radius-radius-round: 50%;
   --dl-color-custom-accent1: #5d576b;
   --dl-space-space-halfunit: 8px;
-  --dl-space-space-sixunits: 96px;
+  --dl-space-space-oneandhalfunits: 24px;
   --dl-space-space-twounits: 32px;
+  --dl-space-space-fiveunits: 80px;
+  --dl-space-space-fourunits: 64px;
+  --dl-space-space-threeunits: 48px;
+  --dl-space-space-sixunits: 96px;
   --dl-color-custom-primary1: #d1510a;
   --dl-color-custom-primary2: #923a06;
   --dl-radius-radius-radius2: 2px;
   --dl-radius-radius-radius4: 4px;
   --dl-radius-radius-radius8: 8px;
-  --dl-space-space-fiveunits: 80px;
-  --dl-space-space-fourunits: 64px;
-  --dl-space-space-threeunits: 48px;
   --dl-color-custom-secondary1: #f3e8e2;
   --dl-color-custom-neutral-dark: #191818;
   --dl-color-custom-neutral-light: #fbfaf9;
-  --dl-space-space-oneandhalfunits: 24px;
 }
 .buttonFilled {
   color: var(--dl-color-custom-neutral-light);

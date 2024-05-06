@@ -34,7 +34,7 @@ const Register = () => {
                                         id="registrationForm"
                                     >
                                         {/* <!-- name -->
-                      <!-- first name --> */}
+                                        <!-- first name --> */}
                                         <div className="row mb-3">
                                             <div className="col-sm-6 mb-3 mb-sm-0">
                                                 <input
@@ -100,9 +100,7 @@ const Register = () => {
                                         {/* <!-- submit button --> */}
                                         <button
                                             className=" d-block btn-user w-100 buttonFilled home-register"
-                                            // style={{ backgroundColor: "#d1510a" }}
-                                            type="submit"
-                                        >
+                                            type="submit" >
                                             Register Account
                                         </button>
                                         <hr />
@@ -141,7 +139,6 @@ const Register = () => {
                         </div>
                     </div>
                 </div>
-                {/* include('common/footer');     */}
             </div>
         </div>
     );

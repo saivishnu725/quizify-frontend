@@ -5,7 +5,7 @@ import StartPage from './startpage';
 
 const IndexPage = () => {
     /* TODO: logic to determine if the user is logged in */;
-    const isLoggedIn = false;
+    const isLoggedIn = true;
 
     if (!isLoggedIn) {
         return <StartPage />;

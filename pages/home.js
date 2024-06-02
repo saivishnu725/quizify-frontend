@@ -1,5 +1,4 @@
 // pages/home.js
-import React from 'react';
 
 const Home = () => {
     return (

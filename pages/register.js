@@ -4,6 +4,8 @@ import { Helmet } from "react-helmet";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Register = () => {
+    const url = process.env.API_URL || "http://localhost:2828";
+
     return (
         <div className="bg-gradient-primary d-flex flex-column h-100" style={{ backgroundColor: "#202020" }}>
             <Helmet>
@@ -30,7 +32,7 @@ const Register = () => {
                                     <form
                                         className="user"
                                         method="post"
-                                        action="/register"
+                                        action={`${url}/auth/register`}
                                         id="registrationForm"
                                     >
                                         {/* <!-- name -->
@@ -43,7 +45,7 @@ const Register = () => {
                                                     type="text"
                                                     id="firstName"
                                                     placeholder="First Name"
-                                                    name="firstName"
+                                                    name="first_name"
                                                 />
                                             </div>
                                             {/* <!-- last name --> */}
@@ -54,7 +56,7 @@ const Register = () => {
                                                     type="text"
                                                     id="lastName"
                                                     placeholder="Last Name"
-                                                    name="lastName"
+                                                    name="last_name"
                                                 />
                                             </div>
                                         </div>

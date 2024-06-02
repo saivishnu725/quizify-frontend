@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Login = () => {
+    const url = process.env.API_URL || "http://localhost:2828";
     return (
         <div className="bg-gradient-primary d-flex flex-column h-100" style={{ backgroundColor: "#202020" }}>
             <Helmet>
@@ -32,7 +33,7 @@ const Login = () => {
                                                 </h4>
                                             </div>
                                             {/* <!-- login form --> */}
-                                            <form className="user" action="/login" method="post">
+                                            <form className="user" action={`${url}/auth/login`} method="post">
                                                 <div className="mb-3">
                                                     <input
                                                         required

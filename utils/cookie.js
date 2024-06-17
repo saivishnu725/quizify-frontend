@@ -8,5 +8,5 @@ export const getToken = () => {
   return Cookies.get("tokey");
 };
 export const removeToken = () => {
-  Cookies.remove("token");
+  Cookies.remove("tokey");
 };

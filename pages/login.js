@@ -1,42 +1,41 @@
 import React, { useState } from "react";
-// import { useRouter } from "next/router";
 import { Helmet } from "react-helmet";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { getToken, setToken } from "../utils/cookie";
 import axiosInstance from "../utils/axiosInstance";
 
 const Login = () => {
-  if (!getToken()) {
-    console.log("Token already exists: ", getToken());
-    // const router = useRouter();
-    // router.push("/");
-  }
 
   const url = process.env.API_URL || "http://localhost:2828";
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [remember, setRemember] = useState("");
+  const [remember, setRemember] = useState();
+  console.log("values: ", { email, password, remember });
 
-  const handleLogin = async (e) => {
-    e.preventDefault();
+  const handleLogin = async () => {
     try {
-      const data = {
-        email: email,
-        password: password,
-        remember: remember,
-      };
-      try {
-        const response = await axiosInstance.post("/auth/login", data);
-        if (response.data.token) {
-          // Store token in cookie
-          setToken(response.data.token);
-        }
-      } catch (e) {
-        console.error("Error in the request or response of /register:", e);
-      }
-    } catch (error) {
-      console.error("Login failed:", error);
+      console.log("Login handle called", { email, password, remember });
+      const response = await axiosInstance.post(`${url}/auth/login`, {
+        email,
+        password,
+        remember
+      });
+      // const response = await fetch(`${url}/auth/login`, {
+      //   method: "POST",
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //     "Accept": "*/*"
+      //   },
+      //   body: JSON.stringify({
+      //     email,
+      //     password,
+      //     remember
+      //   })
+      // });
+      console.log(response);
+    } catch (e) {
+      console.log("Error: ", e);
     }
   };
 

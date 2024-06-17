@@ -1,10 +1,75 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { Helmet } from "react-helmet";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { setToken } from "../utils/cookie";
+import axiosInstance from "../utils/axiosInstance";
+
 
 const Register = () => {
-    const url = process.env.API_URL || "http://localhost:2828";
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [firstName, setFirstName] = useState("");
+    const [lastName, setLastName] = useState("");
+    const [userName, setUserName] = useState("");
+
+    const handleRegister = async (e) => {
+        const url = process.env.REACT_APP_API_URL || "http://localhost:2828";
+
+        const data = {
+            email: email,
+            password: password,
+            username: userName,
+            firstName: firstName,
+            lastName: lastName,
+        };
+        console.log("Data: ", data);
+
+        // try {
+        // const response = await fetch(`${url}/auth/register`, {
+        //     method: "POST",
+        //     headers: {
+        //         "Content-Type": "application/json",
+        //     },
+        //     body: JSON.stringify(data),
+        // });
+        console.log("requesting");
+        const response = axiosInstance.post(`${url}/auth/register`, data)
+            .then(response => {
+                console.log("Response: ", response);
+            })
+            .catch(err => {
+                console.error("Error in the request or response of /register", err);
+            });
+
+        if (response.ok) {
+            // const responseData = await response.json();
+            // if (responseData.token) {
+            //     console.log("Token received: ", responseData.token);
+            console.log("Response received: ", response);
+            //     // Store token in cookie
+            //     setToken('jwt', responseData.token, { expires: 7 });
+            //     console.log("Token stored in cookie: ", responseData.token);
+        }
+    }
+
+    //         if (response.ok) {
+    //             const responseData = await response.json();
+    //             if (responseData.token) {
+    //                 console.log("Token received: ", responseData.token);
+    //                 // Store token in cookie
+    //                 setToken('jwt', responseData.token, { expires: 7 });
+    //                 console.log("Token stored in cookie: ", responseData.token);
+    //             }
+    //         } else {
+    //             const errorData = await response.json();
+    //             console.error("Error in the request or response of /register", errorData);
+    //         }
+    //     } catch (error) {
+    //         console.error("Register failed:", error);
+    //     }
+    // };
+
 
     return (
         <div className="bg-gradient-primary d-flex flex-column h-100" style={{ backgroundColor: "#202020" }}>
@@ -32,7 +97,9 @@ const Register = () => {
                                     <form
                                         className="user"
                                         method="post"
-                                        action={`${url}/auth/register`}
+                                        // action={`${url}/auth/register`}
+                                        // onSubmit={handleRegister}
+                                        onSubmit={handleRegister}
                                         id="registrationForm"
                                     >
                                         {/* <!-- name -->
@@ -44,6 +111,7 @@ const Register = () => {
                                                     className="form-control form-control-user"
                                                     type="text"
                                                     id="firstName"
+                                                    onChange={(e) => setFirstName(e.target.value)}
                                                     placeholder="First Name"
                                                     name="first_name"
                                                 />
@@ -55,6 +123,7 @@ const Register = () => {
                                                     className="form-control form-control-user"
                                                     type="text"
                                                     id="lastName"
+                                                    onChange={(e) => setLastName(e.target.value)}
                                                     placeholder="Last Name"
                                                     name="last_name"
                                                 />
@@ -69,6 +138,7 @@ const Register = () => {
                                                     type="email"
                                                     id="email"
                                                     aria-describedby="emailHelp"
+                                                    onChange={(e) => setEmail(e.target.value)}
                                                     placeholder="Email Address"
                                                     name="email"
                                                 />
@@ -83,6 +153,7 @@ const Register = () => {
                                                     type="text"
                                                     id="username"
                                                     aria-describedby="username"
+                                                    onChange={(e) => setUserName(e.target.value)}
                                                     placeholder="Username"
                                                     name="username"
                                                 />
@@ -94,6 +165,7 @@ const Register = () => {
                                                     className="form-control form-control-user"
                                                     type="password"
                                                     id="password"
+                                                    onChange={(e) => setPassword(e.target.value)}
                                                     placeholder="Password"
                                                     name="password"
                                                 />
